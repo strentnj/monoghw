@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    #scrape{
+      align-items: center;
+    }
+
+    textarea.form-control{
+      border-color: #428bca;
+      resize: none;
+      color: black;
+    }
+
+    html { 
+      background: url(bg.jpeg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    #newsContent{
+      border-style: none;
+      border-color: transparent;
+      outline: none;
+      overflow: auto;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  </style>
+
+  <title>NPR News Scraper</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <!-- Header Begin -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+        <span style="font-size:1.5em" class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+          
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- Header End -->
+
+  <!-- Container Begin -->
+  <div class="container-fluid">
+
+    <!-- Page Header -->
+    <h2 class="text-center">NPR News Scraper</h2><br>
+
+  <!-- Row With Three Columns Begin -->
+  <div id="hideAtStart">
+  <h3 class="text-center" id="article"></h3><br>
+  <div class="row">
+
+    <!-- Row 1 Begin -->
+    <div class="col-sm-3">
+      <button type="button" class="btn btn-primary noteBox" id="attachNote" style="display:block; width: 100%; min-height: 90px"><span class="glyphicon glyphicon-pencil"></span>Attach Note</button>
+      <textarea class="form-control form-control-primary" rows="12" id="addNote"></textarea><br>
+    </div>
+    <!-- Row 1 End -->
+
+    <!-- Row 2 Begin -->
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading" id="newsTitle" style="min-height: 90px">
+          <h3 class="panel-title"></h3>
+        </div>
+        <div class="panel-body" id="">
+        <div contenteditable="true" id="newsContent" style="min-height: 205px">
+          </div>
+          <div contenteditable="false" id="newsLink"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Row 2 End -->
+
+    <!-- Row 3 Begin -->
+    <div class="col-sm-3">
+      <button type="button" class="btn btn-primary" id="deleteNote" style="display:block; width: 100%; min-height: 90px"><span class="glyphicon glyphicon-trash"></span> Delete Note</button>
+      <textarea class="form-control form-control-primary" rows="12" id="savedNote"></textarea><br>
+    </div>
+    <!-- Row 3 End -->
+  </div>
+  <!-- Row With Three Columns End -->
+
+  </div>
+    <a><button type="button" method action="/scraper" class="btn btn-primary center-block" id="scrape">Scrape News</button></a><br>
+
+  <!-- Footer Begin -->
+  <nav class="navbar-fixed-bottom navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+  <!-- Footer End -->
+
+  </div>
+  <!-- Container End -->
+
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

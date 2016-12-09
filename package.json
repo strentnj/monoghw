@@ -1,0 +1,31 @@
+{
+  "name": "mongohw",
+  "version": "1.0.0",
+  "description": "mongo homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strentnj/monoghw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strentnj/monoghw/issues"
+  },
+  "homepage": "https://github.com/strentnj/monoghw#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "mongo": "^0.1.0",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.7.2",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {}
+}
